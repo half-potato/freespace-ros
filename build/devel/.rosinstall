@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/amai/working_workspace/src/ros-freespace/build/devel/setup.sh

@@ -4,6 +4,8 @@ project(freespace_ros)
 #set(CMAKE_BUILD_TYPE Release)
 #set(CMAKE_CXX_FLAGS -std=c++0x)
 
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
+
 find_package(catkin REQUIRED COMPONENTS
 	rospy
 	roscpp
@@ -36,6 +38,7 @@ add_definitions(
 #########
 
 
+set(LIBFREESPACE_FOUND FALSE)
 find_package(roscpp REQUIRED)
 include_directories(${roscpp_INCLUDE_DIRS})
 find_package(libfreespace REQUIRED)
