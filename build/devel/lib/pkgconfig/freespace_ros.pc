@@ -1,8 +1,0 @@
-prefix=/home/amai/working_workspace/src/ros-freespace/build/devel
-
-Name: freespace_ros
-Description: Description of freespace_ros
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/amai/working_workspace/src/ros-freespace/build/devel/lib 
-Requires: 
