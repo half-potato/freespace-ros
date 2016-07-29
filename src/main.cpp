@@ -116,6 +116,7 @@ FreespaceNode::FreespaceNode(int argc, char **argv) : quit(0) {
 				message.linear_acceleration.x = acceleration.x;
 				message.linear_acceleration.y = acceleration.y;
 				message.linear_acceleration.z = acceleration.z;
+				message.header.stamp = ros::Time::now();
 				sensor_msgs::Imu messageNoGravity;
 				messageNoGravity.angular_velocity.x = angVel.x;
 				messageNoGravity.angular_velocity.y = angVel.y;
@@ -123,6 +124,7 @@ FreespaceNode::FreespaceNode(int argc, char **argv) : quit(0) {
 				messageNoGravity.linear_acceleration.x = accNoGravity.x;
 				messageNoGravity.linear_acceleration.y = accNoGravity.y;
 				messageNoGravity.linear_acceleration.z = accNoGravity.z;
+				messageNoGravity.header.stamp = ros::Time::now();
 
 				//message.orientation_covariance
 				this->imu_nogravity_pub.publish(messageNoGravity);
